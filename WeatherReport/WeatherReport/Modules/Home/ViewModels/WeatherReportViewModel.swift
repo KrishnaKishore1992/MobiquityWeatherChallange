@@ -90,6 +90,7 @@ class WeatherReportViewModel<T: NetworkManagerProtocol> {
                     self?.onViewModelUpdated?()
                     completion(nil)
                 } catch let error {
+                    print(error)
                     completion(error)
                 }
             case .failure(let error):
