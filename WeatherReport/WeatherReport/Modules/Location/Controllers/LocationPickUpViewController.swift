@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class LocationPickUpViewController: BaseViewController {
+class LocationPickUpViewController: UIViewController, AlertMessagesProtocol {
 
     @IBOutlet private weak var mapView: MKMapView!
     

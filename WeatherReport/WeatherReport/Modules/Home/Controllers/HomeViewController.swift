@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: UIViewController, AlertMessagesProtocol {
 
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
@@ -18,6 +18,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         
         configureCallBacks()
+        viewModel.addObservers()
     }
     
     private func configureCallBacks() {
@@ -28,11 +29,12 @@ class HomeViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "LocationControllerIdentifier", let locationController = (segue.destination as? UINavigationController)?.children.first as? LocationPickUpViewController {
             locationController.viewModel.onLocationPicked = { [self] in
                 self.viewModel.addNew(bookMark: $0)
             }
+        } else if segue.identifier == "WeatherDetailsIdentifier", let destination = segue.destination as? WeatherReportViewController {
+            destination.viewModel.bookMarkedModel = sender as? BookMarkedModel
         }
     }
     
@@ -69,7 +71,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "LocationControllerIdentifier", sender: viewModel.bookMarkedLocations[indexPath.row])
+        performSegue(withIdentifier: "WeatherDetailsIdentifier", sender: viewModel.bookMarkedLocations[indexPath.row])
     }
 }
 

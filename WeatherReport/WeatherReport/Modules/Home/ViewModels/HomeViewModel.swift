@@ -28,6 +28,13 @@ class HomeViewModel {
     var onBookMarksUpdated: (() -> Void)?
     var mode: ScreenMode = .default
     
+    func addObservers() {
+        NotificationCenter.default.addObserver(forName: .clearBookMarkedLocations, object: nil, queue: .main) { [weak self] (_) in
+            self?._bookMarkedLocations.removeAll()
+            self?.onBookMarksUpdated?()
+        }
+    }
+    
     func addNew(bookMark: BookMarkedModel) {
         print(bookMark)
         _bookMarkedLocations.append(bookMark)
