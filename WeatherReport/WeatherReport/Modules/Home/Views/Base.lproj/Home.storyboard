@@ -104,7 +104,7 @@
                 <viewControllerPlaceholder storyboardName="Location" referencedIdentifier="LocationController" id="zHP-Ir-F7E" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHK-jJ-PXR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="714"/>
+            <point key="canvasLocation" x="725" y="1382"/>
         </scene>
         <!--Weather Details-->
         <scene sceneID="ljN-Ie-5SN">
@@ -177,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpK-Bz-Id2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.0434782608697" y="965.625"/>
+            <point key="canvasLocation" x="1649" y="951"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bms-iW-voV">
@@ -192,6 +192,7 @@
                     <connections>
                         <segue destination="C3h-0i-ktv" kind="relationship" relationship="viewControllers" id="qFn-0R-h5n"/>
                         <segue destination="Fq5-bI-CtE" kind="relationship" relationship="viewControllers" id="78p-ZV-6Y8"/>
+                        <segue destination="T4M-ml-2MZ" kind="relationship" relationship="viewControllers" id="Xoa-96-j9v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cB-I8-nFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,7 +207,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQM-mq-T6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="78"/>
+            <point key="canvasLocation" x="1032" y="46"/>
+        </scene>
+        <!--HelpController-->
+        <scene sceneID="7kW-dq-QEn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Help" referencedIdentifier="HelpController" id="T4M-ml-2MZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hta-hl-nzO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuE-UX-7Et" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027" y="141"/>
         </scene>
         <!--SettingsController-->
         <scene sceneID="AWs-df-3po">
@@ -216,7 +227,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugW-oP-W0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="-70"/>
+            <point key="canvasLocation" x="1043" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BZk-XZ-t5T">

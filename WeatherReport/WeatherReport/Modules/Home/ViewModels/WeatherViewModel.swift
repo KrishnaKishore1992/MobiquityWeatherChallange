@@ -27,7 +27,7 @@ struct WeatherViewModel {
         reports.append(Report(title: "Wind Speed", value: "\(model.wind.speed)\(Units.type.windSpeed)", image: "wind"))
         reports.append(Report(title: "Humidity", value: "\(model.main.humidity)%", image: "cloud.hail.fill"))
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        dateFormatter.dateFormat = "dd/MMM/yyyy hh:mm a"
         date = "Report Date: " + dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(model.dt)))
     }
 }
