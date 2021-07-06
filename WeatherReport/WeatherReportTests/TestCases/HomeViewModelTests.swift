@@ -7,10 +7,11 @@
 
 import XCTest
 @testable import WeatherReport
+import CoreLocation
 
 class HomeViewModelTests: XCTestCase {
 
-    let homeViewModel: HomeViewModel = HomeViewModel()
+    let viewModel: HomeViewModel = HomeViewModel()
     
     override func setUpWithError() throws {
         

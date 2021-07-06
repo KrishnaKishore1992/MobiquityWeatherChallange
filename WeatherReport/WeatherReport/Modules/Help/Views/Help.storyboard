@@ -15,29 +15,10 @@
                     <view key="view" contentMode="scaleToFill" id="ylW-6j-Hmp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jk5-Js-RKp">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DpT-MA-dXb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="jk5-Js-RKp" firstAttribute="top" secondItem="DpT-MA-dXb" secondAttribute="top" id="2Vp-pF-u1k"/>
-                            <constraint firstItem="jk5-Js-RKp" firstAttribute="leading" secondItem="DpT-MA-dXb" secondAttribute="leading" id="HjM-9k-w5J"/>
-                            <constraint firstItem="DpT-MA-dXb" firstAttribute="trailing" secondItem="jk5-Js-RKp" secondAttribute="trailing" id="SSP-pB-sVc"/>
-                            <constraint firstItem="DpT-MA-dXb" firstAttribute="bottom" secondItem="jk5-Js-RKp" secondAttribute="bottom" id="n2q-Mf-M8C"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Help" id="dTm-A0-urL"/>
-                    <connections>
-                        <outlet property="webView" destination="jk5-Js-RKp" id="C75-dS-CNm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jHb-YB-eqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
