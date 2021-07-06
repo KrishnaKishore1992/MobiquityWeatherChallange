@@ -9,7 +9,9 @@ import Foundation
 
 struct NetworkManger: NetworkManagerProtocol {
     
-    static func request(urlRequest: String, type: RequestType, handler: @escaping ((Result<Data, Error>) -> ())) {
+    static let shared: NetworkManger = NetworkManger()
+    
+    func request(urlRequest: String, type: RequestType, handler: @escaping ((Result<Data, Error>) -> ())) {
         
         guard let url = URL(string: urlRequest) else { return }
         

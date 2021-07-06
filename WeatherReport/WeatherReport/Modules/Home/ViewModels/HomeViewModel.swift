@@ -15,7 +15,7 @@ class HomeViewModel {
     
     private var _bookMarkedLocations: [BookMarkedModel] = []
     private var _searchedLocations: [BookMarkedModel] = []
-
+    
     var bookMarkedLocations: [BookMarkedModel] {
         switch mode {
         case .search:
@@ -36,7 +36,6 @@ class HomeViewModel {
     }
     
     func addNew(bookMark: BookMarkedModel) {
-        print(bookMark)
         _bookMarkedLocations.append(bookMark)
         onBookMarksUpdated?()
     }

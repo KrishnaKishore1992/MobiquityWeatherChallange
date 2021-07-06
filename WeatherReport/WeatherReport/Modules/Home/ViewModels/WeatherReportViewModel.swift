@@ -25,6 +25,7 @@ class WeatherReportViewModel {
     var bookMarkedModel: BookMarkedModel?
     var weatherViewModel: [WeatherViewModel]?
     var onViewModelUpdated: (() -> Void)?
+    var networkManager: some NetworkManagerProtocol = NetworkManger.shared
     
     func startObserveOnUnitsChange() {
         
@@ -55,7 +56,7 @@ class WeatherReportViewModel {
         
         let apiUrl = String(format: APIConstants.getForecastAPI.rawValue, latitude, longitude, Units.type.rawValue)
         
-        NetworkManger.request(urlRequest: apiUrl, type: .get) { [weak self] (result) in
+        networkManager.request(urlRequest: apiUrl, type: .get) { [weak self] (result) in
             switch result {
             case .success(let jsonData):
                 do {
@@ -79,7 +80,7 @@ class WeatherReportViewModel {
         
         let apiUrl = String(format: APIConstants.getWeatherAPI.rawValue, latitude, longitude, Units.type.rawValue)
         
-        NetworkManger.request(urlRequest: apiUrl, type: .get) { [weak self] (result) in
+        networkManager.request(urlRequest: apiUrl, type: .get) { [weak self] (result) in
             switch result {
             case .success(let jsonData):
                 do {
