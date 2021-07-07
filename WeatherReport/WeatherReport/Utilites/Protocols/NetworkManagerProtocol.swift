@@ -13,7 +13,6 @@ enum RequestType: String {
 }
 
 protocol NetworkManagerProtocol {
-    associatedtype NetworkManagerType
-    static var shared: NetworkManagerType { get }
+    static var shared: NetworkManagerProtocol { get }
     func request(urlRequest: String, type: RequestType, handler: @escaping((Result<Data, Error>) -> ()))
 }

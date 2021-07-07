@@ -17,6 +17,10 @@ struct BookMarkedModel {
     var longitude: CLLocationDegrees?
     var countryCode: String?
     
+    init() {
+        
+    }
+    
     init?(placemark: CLPlacemark?) {
         
         guard let placemark = placemark else { return nil }

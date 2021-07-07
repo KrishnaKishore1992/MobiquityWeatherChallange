@@ -11,7 +11,7 @@ class WeatherReportViewController: UIViewController, AlertMessagesProtocol {
 
     @IBOutlet private weak var tableView: UITableView!
     
-    let viewModel: WeatherReportViewModel = WeatherReportViewModel()
+    let viewModel: WeatherReportViewModel = WeatherReportViewModel<NetworkManger>()
     
     override func viewDidLoad() {
         super.viewDidLoad()

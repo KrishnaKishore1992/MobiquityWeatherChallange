@@ -1,0 +1,41 @@
+{
+    "coord": {
+        "lon": 78.4846,
+        "lat": 17.5221
+    },
+    "weather": [{
+        "id": 800,
+        "main": "Clear",
+        "description": "clear sky",
+        "icon": "01d"
+    }],
+    "base": "stations",
+    "main": {
+        "temp": 29.54,
+        "feels_like": 30.11,
+        "temp_min": 29,
+        "temp_max": 30,
+        "pressure": 1015,
+        "humidity": 48
+    },
+    "visibility": 6000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 0
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1618464214,
+    "sys": {
+        "type": 1,
+        "id": 9214,
+        "country": "IN",
+        "sunrise": 1618446594,
+        "sunset": 1618491714
+    },
+    "timezone": 19800,
+    "id": 7302845,
+    "name": "Quthbullapur",
+    "cod": 200
+}

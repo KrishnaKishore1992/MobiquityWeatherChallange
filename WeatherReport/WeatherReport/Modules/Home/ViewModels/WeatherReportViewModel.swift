@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WeatherReportViewModel {
+class WeatherReportViewModel<T: NetworkManagerProtocol> {
     
     enum ReportType {
         case weather, forecast
@@ -25,7 +25,7 @@ class WeatherReportViewModel {
     var bookMarkedModel: BookMarkedModel?
     var weatherViewModel: [WeatherViewModel]?
     var onViewModelUpdated: (() -> Void)?
-    var networkManager: some NetworkManagerProtocol = NetworkManger.shared
+    var networkManager: NetworkManagerProtocol = T.shared
     
     func startObserveOnUnitsChange() {
         
